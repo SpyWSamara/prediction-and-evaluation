@@ -20,6 +20,10 @@
     margin-bottom: 80px;
 }
 
+.page-footer {
+    display: block;
+}
+
 .page-form .mdl-textfield {
     width: 100%;
 }
