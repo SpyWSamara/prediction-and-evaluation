@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Комплексная программа поэтапного прогнозирования патологии плода и оценки фетальной адаптации у беременных с плацентарной недостаточностью">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Прогнозирования патологии плода и оценки фетальной адаптации</title>
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Прогнозирования патологии плода и оценки фетальной адаптации">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    <meta name="msapplication-TileImage" content="images/ms-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout__title">Комплексная программа поэтапного прогнозирования и оценки</span>
+            </div>
+        </header>
+        <div class="page-ribbon mdl-layout__header"></div>
+        <main class="page-main mdl-layout__content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                <div class="mdl-cell mdl-cell--8-col mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col page-content">
+                    <p>Комплексная программа поэтапного прогнозирования патологии плода и оценки фетальной адаптации у беременных с плацентарной недостаточностью</p>
+                    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                        <div class="mdl-tabs__tab-bar">
+                            <a href="#first-trimester" class="mdl-tabs__tab is-active">I триместр</a>
+                            <a href="#second-trimester" class="mdl-tabs__tab">II триместр</a>
+                            <a href="#third-trimester" class="mdl-tabs__tab">III триместр</a>
+                        </div>
+                        <div class="mdl-tabs__panel is-active" id="first-trimester">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <p>Оценка фетальной адаптации у беременных с хронической плацентарной недостаточностью в I триместре гестации</p>
+                                    <form class="page-form" id="form1" name="form1">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form1-field1" name="field1" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form1-field1">Содержание HbF (%)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form1-field2" name="field2" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form1-field2">Содержание РАРР-А (мг/л)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form1-field3" name="field3" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form1-field3">Содержание ФРП (пг/мл)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form1-field4" name="field4" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form1-field4">PI в МА</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <p>
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Расчет</button>
+                                            <span class="mdl-spinner mdl-js-spinner mdl-spinner--single-color"></span>
+                                        </p>
+                                    </form>
+                                    <div id="form1-result" class="page-result hidden">
+                                        <div class="mdl-card__title">
+                                            <div class="mdl-card__title-text"><p class="mdl-typography--headline"></p></div>
+                                        </div>
+                                        <div class="mdl-card__supporting-text">
+                                            <p class="mdl-typography--title">Вероятность развития задержки роста и/или хронической гипоксии плода <b class="probability"></b> (<span class="percent"></span>%)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-tabs__panel" id="second-trimester">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <p>Оценка фетальной адаптации у беременных с хронической плацентарной недостаточностью в II триместре гестации</p>
+                                    <form class="page-form" id="form2" name="form2">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form2-field1" name="field1" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form2-field1">Содержание HbF (%)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form2-field2" name="field2" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form2-field2">Содержание ПАМГ (нг/мл)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form2-field3" name="field3" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form2-field3">Содержание Л CD95+ (%)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form2-field4" name="field4" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form2-field4">Содержание ФРП (пг/мл)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <p>
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Расчет</button>
+                                            <span class="mdl-spinner mdl-js-spinner mdl-spinner--single-color"></span>
+                                        </p>
+                                    </form>
+                                    <div id="form2-result" class="page-result hidden">
+                                        <div class="mdl-card__title">
+                                            <div class="mdl-card__title-text"><p class="mdl-typography--headline"></p></div>
+                                        </div>
+                                        <div class="mdl-card__supporting-text display-1">
+                                            <p class="mdl-typography--title">Вероятность развития задержки роста и/или хронической гипоксии плода <b class="probability"></b> (<span class="percent"></span>%)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-tabs__panel" id="third-trimester">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <p>Оценка фетальной адаптации у беременных с хронической плацентарной недостаточностью в III триместре гестации</p>
+                                    <form class="page-form" id="form3" name="form3">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form3-field1" name="field1" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form3-field1">Содержание ПАМГ (нг/мл)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form3-field2" name="field2" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form3-field2">Содержание НЭ (нг/мл)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form3-field3" name="field3" pattern="-?[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form3-field3">Содержание ПЩФ (Ед/л)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form3-field4" name="field4" pattern="[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form3-field4">УЗИ (баллы)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть положительным числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form3-field5" name="field5" pattern="[0-9]*(\.[0-9]+)?">
+                                            <label class="mdl-textfield__label" for="form3-field5">КТГ (баллы)</label>
+                                            <span class="mdl-textfield__error">Значение должно быть положительным числом</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form3-field6" name="field6" pattern="[0-1]?">
+                                            <label class="mdl-textfield__label" for="form3-field6">ЗРП («0» - нет, «1» - есть)</label>
+                                            <span class="mdl-textfield__error">Значение может быть только 1 или 0</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form3-field7" name="field7" pattern="[0-1]?">
+                                            <label class="mdl-textfield__label" for="form3-field7">ХГП («0» - нет, «1» - есть)</label>
+                                            <span class="mdl-textfield__error">Значение может быть только 1 или 0</span>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="form3-field8" name="field8" pattern="[0-1]?">
+                                            <label class="mdl-textfield__label" for="form3-field8">УЗДГ изменения («0» - нет, «1» - есть)</label>
+                                            <span class="mdl-textfield__error">Значение может быть только 1 или 0</span>
+                                        </div>
+                                        <p>
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Расчет</button>
+                                            <span class="mdl-spinner mdl-js-spinner mdl-spinner--single-color"></span>
+                                        </p>
+                                    </form>
+                                    <div id="form3-result" class="page-result hidden">
+                                        <div class="mdl-card__title">
+                                            <div class="mdl-card__title-text"><p class="mdl-typography--headline"></p></div>
+                                        </div>
+                                        <div class="mdl-card__supporting-text display-1">
+                                            <p class="mdl-typography--title">Фетальные адаптационные возможности: <b class="capabilities"></b></p>
+                                            <p class="mdl-typography--title">Акушерская тактика: <b class="tactics"></b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+            </div>
+            <footer class="page-footer mdl-mini-footer">
+                <div class="mdl-mini-footer--left-section">
+                    <div class="mdl-logo">Самара, 2016</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="js/material.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
