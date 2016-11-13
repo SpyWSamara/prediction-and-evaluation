@@ -1,29 +1,7 @@
 ;
 (function() {
-    var stepForms = document.querySelectorAll('form.page-form');
-
-    stepForms.forEach(function(form) {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            handleForm(event.currentTarget);
-        });
-    });
-
-    // stepForms.forEach(function(form) {
-    //     var inputsList = form.querySelectorAll('input');
-    //
-    //     inputsList.forEach(function(input) {
-    //         input.addEventListener('change', function(event) {
-    //             handleForm(event.currentTarget.form);
-    //         });
-    //     });
-    // });
-
     var handleForm = function(form) {
         if (form.hasAttribute('name')) {
-            var inputsList = form.querySelectorAll('input');
-
             clearFormResult(form);
             switch (form.name) {
                 case 'form1':
@@ -45,7 +23,7 @@
         var result = -2.01,
             error = false;
 
-        form.querySelectorAll('input').forEach(function(input) {
+        getElementsList('input', form).forEach(function(input) {
             var val = getFloatValue(input);
             if (val !== false) {
                 switch (input.name) {
@@ -86,7 +64,7 @@
         var result = -4.46,
             error = false;
 
-        form.querySelectorAll('input').forEach(function(input) {
+        getElementsList('input', form).forEach(function(input) {
             var val = getFloatValue(input);
             if (val !== false) {
                 switch (input.name) {
@@ -129,7 +107,7 @@
             result3 = -145.36,
             error = false;
 
-        form.querySelectorAll('input').forEach(function(input) {
+        getElementsList('input', form).forEach(function(input) {
             var val = getFloatValue(input);
             if (val !== false) {
                 switch (input.name) {
@@ -277,4 +255,34 @@
             resultCapabilities.textContent = '';
         }
     }
+
+    var getElementsList = function(selector, parentObject) {
+        parentObject = typeof parentObject !== 'undefined' ? parentObject : document;
+        var result = parentObject.querySelectorAll(selector);
+
+        if (typeof result.forEach !== 'function') {
+            result = Array.prototype.slice.call(result, 0);
+        }
+        return result;
+    }
+
+    var stepForms = getElementsList('form.page-form');
+
+    stepForms.forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+            typeof event.preventDefault === 'function' ? event.preventDefault() : (event.returnValue = false);
+
+            handleForm(event.currentTarget);
+        });
+    });
+
+    // stepForms.forEach(function(form) {
+    //     var inputsList = getElementsList('input', form);
+    //
+    //     inputsList.forEach(function(input) {
+    //         input.addEventListener('change', function(event) {
+    //             handleForm(event.currentTarget.form);
+    //         });
+    //     });
+    // });
 })();
