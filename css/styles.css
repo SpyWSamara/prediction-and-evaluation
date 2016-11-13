@@ -7,6 +7,18 @@
     z-index: 0;
 }
 
+.page-header .mdl-layout__header-row .mdl-layout__title {
+    width: 100%;
+    margin: 0.5em 0;
+    line-height: 1.2em;
+}
+
+@media screen and (max-width: 1024px) {
+    .page-header .mdl-layout__header-row {
+        height: auto;
+    }
+}
+
 .page-main {
     margin-top: -35vh;
     -webkit-flex-shrink: 0;
