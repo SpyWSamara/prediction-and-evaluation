@@ -10,15 +10,15 @@
         });
     });
 
-    stepForms.forEach(function(form) {
-        var inputsList = form.querySelectorAll('input');
-
-        inputsList.forEach(function(input) {
-            input.addEventListener('change', function(event) {
-                handleForm(event.currentTarget.form);
-            });
-        });
-    });
+    // stepForms.forEach(function(form) {
+    //     var inputsList = form.querySelectorAll('input');
+    //
+    //     inputsList.forEach(function(input) {
+    //         input.addEventListener('change', function(event) {
+    //             handleForm(event.currentTarget.form);
+    //         });
+    //     });
+    // });
 
     var handleForm = function(form) {
         if (form.hasAttribute('name')) {
